@@ -15,7 +15,7 @@ const PerrosYGatos = () => {
   useEffect(() => {
     const cargarModelo = async () => {
       console.log('Cargando modelo...');
-      modelo = await tf.loadLayersModel('dist/assets/model.json');
+      modelo = await tf.loadLayersModel('./assets/model.jsonn');
       console.log(modelo);
       console.log('Modelo cargado');
     };
@@ -132,6 +132,7 @@ const PerrosYGatos = () => {
       const resultado = modelo.predict(tensor).dataSync();
 
       let respuesta;
+      console.log(resultado)
       if (resultado <= 0.5) {
         respuesta = 'Gato';
       } else {
