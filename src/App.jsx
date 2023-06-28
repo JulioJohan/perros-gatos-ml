@@ -15,7 +15,7 @@ const PerrosYGatos = () => {
   useEffect(() => {
     const cargarModelo = async () => {
       console.log('Cargando modelo...');
-      modelo = await tf.loadLayersModel('./assets/model.json');
+      modelo = await tf.loadLayersModel('/assets/model.json');
       console.log(modelo);
       console.log('Modelo cargado');
     };
